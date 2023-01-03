@@ -1,16 +1,68 @@
-
+/*home*/
+*{
+  padding:0;
+  margin:0;
+}
 .home {
   display:flex;
   flex-direction: column;
-  min-height: 100vh;
-  align-items: center;
   
+  align-items: center;
+  justify-content: center;
+  /*for moving gradient */
+  background: linear-gradient(-45deg, #8BC6EC, #97D9E1, #D9AFD9, #9599E2);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
 }
 
 .pfp {
-  width:230px;
-    height: auto;
+  width: 25vw;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
 }
+
+
+.bio{
+  display: flex;
+  justify-content: center;
+  gap:100px;
+  width:80vw;
+  align-items: center;
+}
+.text{
+  width:20vw;
+}
+.bodytext{
+  width:20vw;
+  font-size:2rem;
+  text-align:center;
+}
+
+.header{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  
+  
+  margin-bottom: 30px;
+  
+}
+.header>.name{
+  font-size: 35px;
+  padding-left: 10px;
+  font-weight: bold;
+  color: #f1356d;
+  border-bottom:2px solid #f1356d;
+}
+.header>.hi{
+  font-size: 35px;
+  font-weight: bold;
+  border-bottom:2px solid #f1356d;
+}
+/*navbar*/
 a{
   text-decoration: none;
   color: black;
@@ -28,27 +80,33 @@ a{
     justify-content:center;
     gap:75px;
     padding: 0 125px;
-    
+    position:sticky;
+    top:0;
 }
 
-.header{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom:2px solid #f1356d;
-  padding:0;
-  margin-bottom: 30px;
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* body */
+.body{
+  height:200vh;
+  width: 100vw;
   
 }
-.name{
-  font-size: 35px;
-  padding-left: 10px;
-  font-weight: bold;
-  color: #f1356d;
-}
-.bio{
-  display: flex;
-  justify-content: center;
-  gap:100px;
-  width:80vh;
+
+/* foodmark */
+.foodmark{
+  height: 60vh;
+  width:100vw;
+  background-color: rgb(212, 203, 203);
 }

@@ -1,13 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Navbar'
-import Home from './Home'
+
+
+import Navbar from './Components/Navbar'
+import Home from './Components/Home'
+import Foodmark from './Components/Foodmark'
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Home />
+      <div class = "body">
+        <Navbar />
+        <Foodmark />
+      </div>
+      
+      
     </div>
   );
 }
